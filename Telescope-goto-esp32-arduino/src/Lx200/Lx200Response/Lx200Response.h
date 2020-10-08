@@ -5,10 +5,10 @@
 
 class Lx200Response{
     protected:
-        String body;
-        void setBody(String body);
+        std::string body;
+        void setBody(std::string body);
     public:
-        String getBody();
+        std::string getBody();
 };
 
 #endif

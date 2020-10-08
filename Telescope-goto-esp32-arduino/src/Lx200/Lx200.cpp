@@ -1,6 +1,6 @@
 #include "./Lx200.h"
 
-Lx200::Lx200(BluetoothSerial &btSerial):btSerial(btSerial){
+Lx200::Lx200(ComunicationInterface &comunicationInterface):comunicationInterface(comunicationInterface){
 
 }
 
@@ -9,16 +9,16 @@ void Lx200::registerCallback(Lx200Response (&callback)(Lx200Request)){
 }
 
 void Lx200::loop(){
-    if(this->btSerial.available()){
-        String buffer = btSerial.readString();
-        Serial.println(buffer);
+    if(this->comunicationInterface.available()){
+        std::string buffer = this->comunicationInterface.recive();
+        Serial.println(buffer.c_str());
         if(buffer[buffer.length() - 1] == '#'){
             if(buffer == ":GR#"){
-                Serial.print(this->callback(Lx200RequestGR()).getBody());
-                btSerial.print(this->callback(Lx200RequestGR()).getBody());
+                Serial.print(this->callback(Lx200RequestGR()).getBody().c_str());
+                comunicationInterface.send(this->callback(Lx200RequestGR()).getBody());
             }else if(buffer == ":GD#"){
-                Serial.print(this->callback(Lx200RequestGD()).getBody());
-                btSerial.print(this->callback(Lx200RequestGD()).getBody());
+                Serial.print(this->callback(Lx200RequestGD()).getBody().c_str());
+                comunicationInterface.send(this->callback(Lx200RequestGD()).getBody());
             }
         }
     }

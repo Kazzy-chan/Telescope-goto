@@ -1,4 +1,5 @@
 #include <Arduino.h>
+#include "ComunicationInterface/Bluetooth/BluetoothComunicationInterface.h"
 #include "./Lx200/Lx200.h"
 #include "./Lx200/Lx200Response/Lx200Response.h"
 #include "./Lx200/Lx200Response/GD/Lx200ResponseGD.h"
@@ -6,7 +7,8 @@
 #include "BluetoothSerial.h"
 
 BluetoothSerial btSerial;
-Lx200 lx200(btSerial);
+BluetoothComunicationInterface comunicationInterface(btSerial);
+Lx200 lx200(comunicationInterface);
 bool isProtocolSelected = false;
 
 Lx200Response interpreter(Lx200Request request);
