@@ -1,4 +1,5 @@
 /* server.c */
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -78,7 +79,7 @@ int main( int argc, char *argv[]) {
     int sock, fd;
 #endif
 
-    unsigned int len;
+    int len;
 
 #ifdef _WIN32
     /* Initialisiere TCP für Windows ("winsock"). */

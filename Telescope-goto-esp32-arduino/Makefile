@@ -1,6 +1,6 @@
 ifeq ($(OS),Windows_NT)
     CXX := g++
-	CXX_FLAGS := -Wall
+	CXX_FLAGS := -Wall -lws2_32
 else
 	UNAME_S := $(shell uname -s)
 	ifeq ($(UNAME_S),Darwin)
