@@ -1,0 +1,45 @@
+// AUTOMATICALLY GENERATED FILE. PLEASE DO NOT MODIFY IT MANUALLY
+
+// PIO Unified Debugger
+//
+// Documentation: https://docs.platformio.org/page/plus/debugging.html
+// Configuration: https://docs.platformio.org/page/projectconf/section_env_debug.html
+
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "platformio-debug",
+            "request": "launch",
+            "name": "PIO Debug",
+            "executable": "/Users/fabiankohnen/www/Telescope-goto/Telescope-goto-esp32-arduino/.pio/build/esp32doit-devkit-v1/firmware.elf",
+            "toolchainBinDir": "/Users/fabiankohnen/.platformio/packages/toolchain-xtensa32/bin",
+            "preLaunchTask": {
+                "type": "PlatformIO",
+                "task": "Pre-Debug"
+            },
+            "internalConsoleOptions": "openOnSessionStart"
+        },
+        {
+            "type": "platformio-debug",
+            "request": "launch",
+            "name": "PIO Debug (skip Pre-Debug)",
+            "executable": "/Users/fabiankohnen/www/Telescope-goto/Telescope-goto-esp32-arduino/.pio/build/esp32doit-devkit-v1/firmware.elf",
+            "toolchainBinDir": "/Users/fabiankohnen/.platformio/packages/toolchain-xtensa32/bin",
+            "internalConsoleOptions": "openOnSessionStart"
+        },
+        {
+            "name": "C++ Debug (lldb)",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${workspaceFolder}/bin/main",
+            "preLaunchTask": "Build C++ project",
+            "args": [],
+            "stopAtEntry": false,
+            "cwd": "${workspaceFolder}",
+            "environment": [],
+            "externalConsole": true,
+            "MIMode": "lldb"
+        }
+    ]
+}
