@@ -7,7 +7,6 @@
 #include "./Lx200Request/GD/Lx200RequestGD.h"
 #include "./Lx200Request/GR/Lx200RequestGR.h"
 #include "./Lx200Response/Lx200Response.h"
-#include "BluetoothSerial.h"
 
 
 class Lx200{
