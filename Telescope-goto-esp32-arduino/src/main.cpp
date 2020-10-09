@@ -1,50 +1,18 @@
-#include <Arduino.h>
-#include "ComunicationInterface/Bluetooth/BluetoothComunicationInterface.h"
-#include "./Lx200/Lx200.h"
-#include "./Lx200/Lx200Response/Lx200Response.h"
-#include "./Lx200/Lx200Response/GD/Lx200ResponseGD.h"
-#include "./Lx200/Lx200Response/GR/Lx200ResponseGR.h"
-#include "BluetoothSerial.h"
+#ifdef dev
 
-BluetoothSerial btSerial;
-BluetoothComunicationInterface comunicationInterface(btSerial);
-Lx200 lx200(comunicationInterface);
-bool isProtocolSelected = false;
+void setup();
+void loop();
 
-Lx200Response interpreter(Lx200Request request);
-
-void setup(){
-    Serial.begin(115200);
-    btSerial.begin("Teleskop GoTo");
-    lx200.registerCallback(interpreter);
-}
-
-Lx200Response interpreter(Lx200Request request){
-
-    switch (request.getType()){
-    case Lx200Requests::GD:
-        return Lx200ResponseGD(true, 12, 15, 12);
-    case Lx200Requests::GR:
-        return Lx200ResponseGR(12,12,34);
-    default:
-        break;
+int main(int argc, char const *argv[]){
+    setup();
+    while (true){
+        loop();
     }
     
+    return 0;
 }
 
-void loop(){
-    if (!isProtocolSelected){
-        if (btSerial.available()){
-            String buffer = btSerial.readString();
-            Serial.println(buffer);
-            if (buffer[0] == '#'){
-                Serial.println("Sending P");
-                btSerial.printf("P");
-                isProtocolSelected = true;
-            }
-        }
-    }else{
-        lx200.loop();
-    }
-    // put your main code here, to run repeatedly:
-}
+#else
+
+
+#endif

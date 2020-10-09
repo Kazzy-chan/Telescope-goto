@@ -13,20 +13,24 @@ else
 endif
 
 BIN		:= bin
-SRC		:= dev
+SRC		:= src
 INCLUDE	:= include
 LIB		:= lib
+SRCS 	:= $(wildcard *.cpp)
 
 LIBRARIES	:=
 EXECUTABLE	:= main
+rwildcard=$(foreach d,$(wildcard $(1:=/*)),$(call rwildcard,$d,$2) $(filter $(subst *,%,$2),$d))
+ALL_SRC_FILES=$(call rwildcard,src,*.cpp !**/esp32/**)
+DEV_SRC_FILES = $(filter-out src/esp32/%,$(ALL_SRC_FILES))
 
 all: $(BIN)/$(EXECUTABLE)
 
 run: clean all
 	./$(BIN)/$(EXECUTABLE)
 
-$(BIN)/$(EXECUTABLE): $(SRC)/*.cpp
-	$(CXX) $(CXX_FLAGS) -I$(INCLUDE) -L$(LIB) $^ -o $@ $(LIBRARIES)
+$(BIN)/$(EXECUTABLE): $(DEV_SRC_FILES)
+	$(CXX) $(CXX_FLAGS) -I$(INCLUDE) -L$(LIB) $^ -o $@ $(LIBRARIES) -Ddev -lws2_32
 
 clean:
 	-rm $(BIN)/*

@@ -1,6 +1,7 @@
 #ifndef __LX200Response_h__
 #define __LX200Response_h__
 
+#include <string>
 
 class Lx200Response{
     protected:

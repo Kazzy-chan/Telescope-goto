@@ -3,16 +3,16 @@
 
 #include <BluetoothSerial.h>
 #include <string>
-#include "../ComunicationInterface.h"
+#include "../../common/Lx200/ComunicationInterface/ComunicationInterface.h"
 
 class BluetoothComunicationInterface: public ComunicationInterface{
 private:
-    BluetoothSerial& btSerial;
+    BluetoothSerial btSerial;
 public:
-    BluetoothComunicationInterface(BluetoothSerial& btSerial);
+    BluetoothComunicationInterface(std::string deviceName);
     ~BluetoothComunicationInterface();
     virtual bool available();
-    virtual void send(std::string send);
+    virtual void write(std::string send);
     virtual std::string recive();
 };
 
