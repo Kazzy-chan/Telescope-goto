@@ -44,7 +44,11 @@ private:
 
         void createSocket();
         void error_exit(char *error_message);
+    #ifdef _WIN32
         int len;
+    #else
+        socklen_t len;
+    #endif
 public:
     TcpServer();
     ~TcpServer();

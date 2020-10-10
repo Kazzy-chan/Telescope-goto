@@ -8,7 +8,7 @@ else
 		CXX_FLAGS := -Wall -Wextra -std=c++17 -g
 	else
 		CXX := g++
-		CXX_FLAGS := -Wall
+		CXX_FLAGS := -Wall -Wextra
 	endif
 endif
 
@@ -30,7 +30,7 @@ run: clean all
 	./$(BIN)/$(EXECUTABLE)
 
 $(BIN)/$(EXECUTABLE): $(DEV_SRC_FILES)
-	$(CXX) $(CXX_FLAGS) -I$(INCLUDE) -L$(LIB) $^ -o $@ $(LIBRARIES) -Ddev -lws2_32
+	$(CXX) $(CXX_FLAGS) -I$(INCLUDE) -L$(LIB) $^ -o $@ $(LIBRARIES) -Ddev
 
 clean:
 	-rm $(BIN)/*

@@ -102,6 +102,7 @@ void TcpServer::createSocket(){
         error_exit("Fehler beim Anlegen eines Sockets");
 }
 
+#ifdef _WIN32
 void TcpServer::initWinsock(){
     WORD wVersionRequested;
     WSADATA wsaData;
@@ -111,6 +112,7 @@ void TcpServer::initWinsock(){
     else
         printf("Winsock initialisiert\n");
 }
+#endif
 
 #endif
 #endif
