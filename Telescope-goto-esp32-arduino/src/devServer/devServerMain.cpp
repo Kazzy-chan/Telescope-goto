@@ -1,6 +1,5 @@
-#ifdef dev
-
 #include "TcpServer/TcpServer.h"
+#include "../common/Logger.h"
 #include "../common/Lx200/Lx200.h"
 #include "../common/Lx200/Lx200Response/Lx200Response.h"
 #include "../common/Lx200/Lx200Response/GD/Lx200ResponseGD.h"
@@ -35,10 +34,10 @@ void loop(){
         if (comunicationInterface.available()){
             std::string buffer = comunicationInterface.recive();
             //Serial.println(buffer);
-            printf("%s\n", buffer.c_str());
+            logger.LOG_I("=>", buffer.c_str());
             if (buffer[0] == 0x06){
-                comunicationInterface.write("P);
-                printf("sending P");
+                comunicationInterface.write("P");
+                logger.LOG_I("<=", "P");
                 isProtocolSelected = true;
             }
         }
@@ -46,5 +45,3 @@ void loop(){
         lx200.loop();
     }
 }
-
-#endif

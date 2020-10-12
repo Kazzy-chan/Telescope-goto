@@ -1,11 +1,10 @@
-#ifndef dev
-
 #include <Arduino.h>
 #include "./esp32/Bluetooth/BluetoothComunicationInterface.h"
-#include "./common/Lx200/Lx200.h"
-#include "./common/Lx200/Lx200Response/Lx200Response.h"
-#include "./common/Lx200/Lx200Response/GD/Lx200ResponseGD.h"
-#include "./common/Lx200/Lx200Response/GR/Lx200ResponseGR.h"
+#include "../common/Logger.h"
+#include "../common/Lx200/Lx200.h"
+#include "../common/Lx200/Lx200Response/Lx200Response.h"
+#include "../common/Lx200/Lx200Response/GD/Lx200ResponseGD.h"
+#include "../common/Lx200/Lx200Response/GR/Lx200ResponseGR.h"
 
 BluetoothComunicationInterface comunicationInterface("Teleskop GoTo");
 Lx200 lx200(comunicationInterface);
@@ -35,10 +34,10 @@ void loop(){
     if (!isProtocolSelected){
         if (comunicationInterface.available()){
             std::string buffer = comunicationInterface.recive();
-            //Serial.println(buffer);
-            if (buffer[0] == '#'){
-                //Serial.println("Sending P");
+            logger.LOG_I("=>", buffer.c_str());
+            if (buffer[0] == 0x06){
                 comunicationInterface.write("P");
+                logger.LOG_I("<=", "P");
                 isProtocolSelected = true;
             }
         }
@@ -46,5 +45,3 @@ void loop(){
         lx200.loop();
     }
 }
-
-#endif

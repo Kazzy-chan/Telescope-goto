@@ -1,14 +1,9 @@
-#ifdef dev
-
 #ifndef __Server_cpp__
 #define __Server_cpp__
 
 #include "./TcpServer.h"
 
 TcpServer::TcpServer(){
-
-            /* Schließe die Verbindung. */
-
 }
 
 void TcpServer::init(){
@@ -113,5 +108,4 @@ void TcpServer::initWinsock(){
 }
 #endif
 
-#endif
 #endif

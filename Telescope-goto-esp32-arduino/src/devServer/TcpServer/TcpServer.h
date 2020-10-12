@@ -1,5 +1,3 @@
-#ifdef dev
-
 #ifndef __Server_h__
 #define __Server_h__
 
@@ -58,5 +56,4 @@ public:
 };
 
 
-#endif
 #endif
