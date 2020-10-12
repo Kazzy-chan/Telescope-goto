@@ -4,7 +4,7 @@
 #include <Arduino.h>
 #include "BluetoothSerial.h"
 #include <string>
-#include "../../common/Lx200/ComunicationInterface/ComunicationInterface.h"
+#include "../../common/ComunicationInterface/ComunicationInterface.h"
 
 class BluetoothComunicationInterface: public ComunicationInterface{
     private:

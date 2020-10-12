@@ -1,49 +1,32 @@
-#include <Arduino.h>
 #include "./esp32/Bluetooth/BluetoothComunicationInterface.h"
-#include "../common/Logger.h"
-#include "../common/Lx200/Lx200.h"
-#include "../common/Lx200/Lx200Response/Lx200Response.h"
-#include "../common/Lx200/Lx200Response/GD/Lx200ResponseGD.h"
-#include "../common/Lx200/Lx200Response/GR/Lx200ResponseGR.h"
-#include "BluetoothSerial.h"
+#include "../common/Protocols/ProtocolsManager.h"
+
+#include "../common/Protocols/Lx200/Lx200RequestHandler/Lx200RequestHandler.h"
+#include "../common/Protocols/Lx200/Lx200.h"
+
+#include "../common/Protocols/AppProtocol/AppProtocol.h"
+#include "../common/Protocols/AppProtocol/AppProtocolRequestHandler/AppProtocolRequestHandler.h"
+
+#include "../common/Protocols/StellariumProtocolSelector/StellariumProtocolSelector.h"
+
 
 BluetoothComunicationInterface comunicationInterface;
-Lx200 lx200(comunicationInterface);
-bool isProtocolSelected = false;
 
-Lx200Response interpreter(Lx200Request request);
+Lx200RequestHandler lx200RequestHandler;
+AppProtocolRequestHandler appProtocolRequestHandler;
+
+Lx200 lx200(lx200RequestHandler);
+AppProtocol appProtocol(appProtocolRequestHandler);
+StellariumProtocolSelector stellariumProtocolSelector;
+
+ProtocolsManager protocolsManager(comunicationInterface, appProtocol, stellariumProtocolSelector, lx200);
+bool isProtocolSelected = false;
 
 void setup(){
     comunicationInterface.init("Teleskop GoTo");
-    lx200.registerCallback(interpreter);
-}
-
-Lx200Response interpreter(Lx200Request request){
-
-    switch (request.getType()){
-    case Lx200Requests::GD:
-        return Lx200ResponseGD(true, 12, 15, 12);
-    case Lx200Requests::GR:
-        return Lx200ResponseGR(12,12,34);
-    default:
-        break;
-    }
-    
 }
 
 void loop(){
-    if (!isProtocolSelected){
-        if (comunicationInterface.available()){
-            std::string buffer = comunicationInterface.recive();
-            logger.LOG_I("=>", buffer.c_str());
-            if (buffer[0] == '#'){
-                comunicationInterface.write("P");
-                logger.LOG_I("<=", "P");
-                isProtocolSelected = true;
-            }
-        }
-    }else{  
-        lx200.loop();
-    }
+    protocolsManager.loop();
 }
 

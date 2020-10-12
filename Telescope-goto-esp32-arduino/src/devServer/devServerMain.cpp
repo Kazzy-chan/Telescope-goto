@@ -1,19 +1,19 @@
 #include "TcpServer/TcpServer.h"
 #include "../common/Logger.h"
-#include "../common/Lx200/Lx200.h"
-#include "../common/Lx200/Lx200Response/Lx200Response.h"
-#include "../common/Lx200/Lx200Response/GD/Lx200ResponseGD.h"
-#include "../common/Lx200/Lx200Response/GR/Lx200ResponseGR.h"
+#include "../common/Protocols/ProtocolsManager.h"
+
+#include "../common/Protocols/Lx200/Lx200Response/GD/Lx200ResponseGD.h"
+#include "../common/Protocols/Lx200/Lx200Response/GR/Lx200ResponseGR.h"
 
 TcpServer comunicationInterface;
-Lx200 lx200(comunicationInterface);
+ProtocolsManager protocolsManager(comunicationInterface);
 bool isProtocolSelected = false;
 
 Lx200Response interpreter(Lx200Request request);
 
 void setup(){
     comunicationInterface.init();
-    lx200.registerCallback(interpreter);
+    protocolsManager.registerCallbackLx200(interpreter);
 }
 
 Lx200Response interpreter(Lx200Request request){
@@ -30,18 +30,5 @@ Lx200Response interpreter(Lx200Request request){
 }
 
 void loop(){
-    if (!isProtocolSelected){
-        if (comunicationInterface.available()){
-            std::string buffer = comunicationInterface.recive();
-            //Serial.println(buffer);
-            logger.LOG_I("=>", buffer.c_str());
-            if (buffer[0] == 0x06){
-                comunicationInterface.write("P");
-                logger.LOG_I("<=", "P");
-                isProtocolSelected = true;
-            }
-        }
-    }else{
-        lx200.loop();
-    }
+    protocolsManager.loop();
 }

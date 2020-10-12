@@ -25,7 +25,7 @@
 #include <unistd.h>
 #endif
 
-#include "../../common/Lx200/ComunicationInterface/ComunicationInterface.h"
+#include "../../common/ComunicationInterface/ComunicationInterface.h"
 
 class TcpServer: public ComunicationInterface{
 private:
@@ -44,7 +44,7 @@ private:
 
     #endif
         void createSocket();
-        void error_exit(char *error_message);
+        void error_exit(std::string error_message);
 public:
     TcpServer();
     ~TcpServer();

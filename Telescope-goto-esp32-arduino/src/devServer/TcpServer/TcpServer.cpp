@@ -79,12 +79,12 @@ std::string TcpServer::recive(){
     return this->buffer;
 }
 
-void TcpServer::error_exit(char *error_message) {
+void TcpServer::error_exit(std::string error_message) {
 
     #ifdef _WIN32
-        fprintf(stderr,"%s: %d\n", error_message, WSAGetLastError());
+        fprintf(stderr,"%s: %d\n", error_message.c_str(), WSAGetLastError());
     #else
-        fprintf(stderr, "%s: %s\n", error_message, strerror(errno));
+        fprintf(stderr, "%s: %s\n", error_message.c_str(), strerror(errno));
     #endif
 
     exit(EXIT_FAILURE);
