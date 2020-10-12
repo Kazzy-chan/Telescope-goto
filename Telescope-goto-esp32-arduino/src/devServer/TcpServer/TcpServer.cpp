@@ -73,8 +73,7 @@ bool TcpServer::available(){
 }
 
 void TcpServer::write(std::string data){
-    
-    send(this->fd, data.c_str(), RCVBUFSIZE, 0);
+    send(this->fd, data.c_str(), data.length(), 0);
 }
 
 std::string TcpServer::recive(){

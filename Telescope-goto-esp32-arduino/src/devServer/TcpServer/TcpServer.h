@@ -38,17 +38,15 @@ private:
     #ifdef _WIN32
         SOCKET sock, fd;
         void initWinsock();
+        int len;
+
     #else
         int sock, fd;
-    #endif
+        socklen_t len;
 
+    #endif
         void createSocket();
         void error_exit(char *error_message);
-    #ifdef _WIN32
-        int len;
-    #else
-        socklen_t len;
-    #endif
 public:
     TcpServer();
     ~TcpServer();

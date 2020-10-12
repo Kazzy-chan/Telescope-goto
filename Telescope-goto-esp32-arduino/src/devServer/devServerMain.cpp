@@ -35,10 +35,10 @@ void loop(){
         if (comunicationInterface.available()){
             std::string buffer = comunicationInterface.recive();
             //Serial.println(buffer);
-            printf(buffer.c_str());
-            if (buffer[0] == '#'){
-                //Serial.println("Sending P");
-                comunicationInterface.write("P");
+            printf("%s\n", buffer.c_str());
+            if (buffer[0] == 0x06){
+                comunicationInterface.write("P);
+                printf("sending P");
                 isProtocolSelected = true;
             }
         }

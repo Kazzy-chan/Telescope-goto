@@ -30,7 +30,7 @@ run: clean all
 	./$(BIN)/$(EXECUTABLE)
 
 $(BIN)/$(EXECUTABLE): $(DEV_SRC_FILES)
-	$(CXX) $(CXX_FLAGS) -I$(INCLUDE) -L$(LIB) $^ -o $@ $(LIBRARIES) -Ddev
+	$(CXX) -I$(INCLUDE) -L$(LIB) $^ -o $@ $(LIBRARIES) -Ddev $(CXX_FLAGS)
 
 clean:
 	-rm $(BIN)/*
