@@ -11,12 +11,16 @@ void Lx200::registerCallback(Lx200Response (&callback)(Lx200Request)){
 void Lx200::loop(){
     if(this->comunicationInterface.available()){
         std::string buffer = this->comunicationInterface.recive();
+        logger.LOG_I("=>", buffer);
         if(buffer[buffer.length() - 1] == '#'){
+            Lx200Response response;
             if(buffer == ":GR#"){
-                comunicationInterface.write(this->callback(Lx200RequestGR()).getBody());
+                response = this->callback(Lx200RequestGR());
             }else if(buffer == ":GD#"){
-                comunicationInterface.write(this->callback(Lx200RequestGD()).getBody());
+                response = this->callback(Lx200RequestGD());
             }
+            logger.LOG_I("<=", response.getBody());
+            comunicationInterface.write(response.getBody());
         }
     }
 }

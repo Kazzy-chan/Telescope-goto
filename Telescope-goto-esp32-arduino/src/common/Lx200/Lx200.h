@@ -2,6 +2,7 @@
 #define __LX200_h__
 
 #include "./ComunicationInterface/ComunicationInterface.h"
+#include "../Logger.h"
 #include "./Lx200Request/Lx200Requests.h"
 #include "./Lx200Request/Lx200Request.h"
 #include "./Lx200Request/GD/Lx200RequestGD.h"
