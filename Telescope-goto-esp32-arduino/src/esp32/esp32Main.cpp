@@ -5,15 +5,16 @@
 #include "../common/Lx200/Lx200Response/Lx200Response.h"
 #include "../common/Lx200/Lx200Response/GD/Lx200ResponseGD.h"
 #include "../common/Lx200/Lx200Response/GR/Lx200ResponseGR.h"
+#include "BluetoothSerial.h"
 
-BluetoothComunicationInterface comunicationInterface("Teleskop GoTo");
+BluetoothComunicationInterface comunicationInterface;
 Lx200 lx200(comunicationInterface);
 bool isProtocolSelected = false;
 
 Lx200Response interpreter(Lx200Request request);
 
 void setup(){
-    Serial.begin(115200);
+    comunicationInterface.init("Teleskop GoTo");
     lx200.registerCallback(interpreter);
 }
 
@@ -35,13 +36,14 @@ void loop(){
         if (comunicationInterface.available()){
             std::string buffer = comunicationInterface.recive();
             logger.LOG_I("=>", buffer.c_str());
-            if (buffer[0] == 0x06){
+            if (buffer[0] == '#'){
                 comunicationInterface.write("P");
                 logger.LOG_I("<=", "P");
                 isProtocolSelected = true;
             }
         }
-    }else{
+    }else{  
         lx200.loop();
     }
 }
+

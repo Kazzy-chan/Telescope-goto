@@ -9,7 +9,7 @@ Logger::Logger(){
 }
 
 void Logger::LOG_I(std::string tag, std::string msg){
-    Serial.printf("%s: %s\n", tag, msg);
+    Serial.printf("%s: %s\n", tag.c_str(), msg.c_str());
 }
 
 void Logger::LOG_E(std::string tag, std::string msg){
