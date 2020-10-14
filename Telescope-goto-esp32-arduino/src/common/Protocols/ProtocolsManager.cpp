@@ -17,7 +17,7 @@ void ProtocolsManager::loop(){
         logger.LOG_I("=>", buffer);
         std::string response = "";
 
-        if(buffer[buffer.length() - 1] == '#'){
+        if(buffer[buffer.length() - 1] == '#' || buffer[0] == 0x06){
             response = this->lx200.interpret(buffer);
         }else if(buffer[buffer.length() - 1] == ';'){
             response = this->appProtocol.interpret(buffer);

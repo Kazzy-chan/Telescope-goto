@@ -5,8 +5,13 @@ StellariumProtocolSelector::StellariumProtocolSelector(){
 }
 
 std::string StellariumProtocolSelector::interpret(std::string msg){
-    if (msg[0] == '#' || msg[0] == 0x06){
+    std::string lx200Match = "";
+    lx200Match += '#';
+    lx200Match += 0x06;
+
+    if (msg == lx200Match){
         return "P";
     }
+
     return "";
 }
