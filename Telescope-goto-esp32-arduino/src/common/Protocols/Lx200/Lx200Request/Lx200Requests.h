@@ -4,6 +4,7 @@
 enum Lx200Requests{
     GD,
     GR,
+    GVP
 };
 
 #endif

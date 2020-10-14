@@ -6,6 +6,7 @@
 
 #include "../Lx200Response/GD/Lx200ResponseGD.h"
 #include "../Lx200Response/GR/Lx200ResponseGR.h"
+#include "../Lx200Response/GVP/Lx200ResponseGVP.h"
 
 class Lx200RequestHandler{
 public:
