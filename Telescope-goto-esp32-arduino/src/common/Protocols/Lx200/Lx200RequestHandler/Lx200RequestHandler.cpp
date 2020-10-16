@@ -1,7 +1,6 @@
 #include "Lx200RequestHandler.h"
 
-Lx200RequestHandler::Lx200RequestHandler(){
-    
+Lx200RequestHandler::Lx200RequestHandler(AppDataTimeDateLocation& appDataTimeDateLocation): appDataTimeDateLocation(appDataTimeDateLocation){
 }
 
 Lx200Response Lx200RequestHandler::handle(Lx200Request request){

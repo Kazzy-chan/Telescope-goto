@@ -1,6 +1,8 @@
 #include "TcpServer/TcpServer.h"
 #include "../common/Protocols/ProtocolsManager.h"
 
+#include "../common/AppData/TimeDateLocation/AppDataTimeDateLocation.h"
+
 #include "../common/Protocols/Lx200/Lx200RequestHandler/Lx200RequestHandler.h"
 #include "../common/Protocols/Lx200/Lx200.h"
 
@@ -12,8 +14,10 @@
 
 TcpServer comunicationInterface;
 
-Lx200RequestHandler lx200RequestHandler;
-AppProtocolRequestHandler appProtocolRequestHandler;
+AppDataTimeDateLocation appDataTimeDateLocation;
+
+Lx200RequestHandler lx200RequestHandler(appDataTimeDateLocation);
+AppProtocolRequestHandler appProtocolRequestHandler(appDataTimeDateLocation);
 
 Lx200 lx200(lx200RequestHandler);
 AppProtocol appProtocol(appProtocolRequestHandler);
