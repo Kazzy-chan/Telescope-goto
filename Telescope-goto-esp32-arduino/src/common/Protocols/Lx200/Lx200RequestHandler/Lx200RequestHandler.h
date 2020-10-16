@@ -6,10 +6,6 @@
 #include "../Lx200Response/Lx200Response.h"
 #include "../Lx200Request/Lx200Request.h"
 
-#include "../Lx200Response/GD/Lx200ResponseGD.h"
-#include "../Lx200Response/GR/Lx200ResponseGR.h"
-#include "../Lx200Response/GVP/Lx200ResponseGVP.h"
-
 class Lx200RequestHandler{
 private:
     AppDataTimeDateLocation& appDataTimeDateLocation;

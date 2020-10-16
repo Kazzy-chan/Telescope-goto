@@ -4,7 +4,17 @@
 enum Lx200Requests{
     GD,
     GR,
-    GVP
+    GVP,
+    GVN,
+    GVD,
+    GVT,
+    Gg,
+    Gt,
+    GC,
+    GL,
+    GG,
+    D,
+    GW
 };
 
 #endif

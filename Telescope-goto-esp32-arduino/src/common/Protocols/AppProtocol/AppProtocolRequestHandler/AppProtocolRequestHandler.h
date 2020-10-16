@@ -17,9 +17,18 @@
 class AppProtocolRequestHandler{
 private:
     AppDataTimeDateLocation& appDataTimeDateLocation;
+
+    AppProtocolResponse onTimeRequest(AppProtocolRequest*);
+    AppProtocolResponse onDateRequest(AppProtocolRequest*);
+    AppProtocolResponse onUtcOffsetRequest(AppProtocolRequest*);
+    AppProtocolResponse onLatitudeRequest(AppProtocolRequest*);
+    AppProtocolResponse onLongitudeRequest(AppProtocolRequest*);
+
 public:
     AppProtocolRequestHandler(AppDataTimeDateLocation& appDataTimeDateLocation);
     AppProtocolResponse handle(AppProtocolRequest*);
+
+
 };
 
 #endif

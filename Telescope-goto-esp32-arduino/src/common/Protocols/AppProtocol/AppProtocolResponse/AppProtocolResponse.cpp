@@ -1,7 +1,7 @@
 #include "AppProtocolResponse.h"
 
 AppProtocolResponse::AppProtocolResponse(std::string body){
-    this->body = body;
+    this->setBody(body);
 }
 
 std::string AppProtocolResponse::getBody(){
@@ -9,9 +9,9 @@ std::string AppProtocolResponse::getBody(){
 }
 
 void AppProtocolResponse::setBody(std::string body){
-    this->body = body;
+    this->body = ":" + body + ";";
 }
 
 AppProtocolResponse AppProtocolResponse::ok(){
-    return AppProtocolResponse(":ok;");
+    return AppProtocolResponse("ok");
 }

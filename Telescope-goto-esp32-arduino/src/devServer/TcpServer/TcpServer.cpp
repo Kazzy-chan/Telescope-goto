@@ -62,9 +62,20 @@ bool TcpServer::available(){
     if (this->fd < 0)
         return false;
 
-    recv(this->fd, this->buffer, RCVBUFSIZE, 0);
-    this->isBufferRead = false;
-    return true;
+    // memset(buffer, 0, RCVBUFSIZE);
+
+    int readBytes = recv(this->fd, this->buffer, RCVBUFSIZE, 0);
+    if(readBytes == 0){
+        printf("client disconected\n");
+        printf("awaiting a new one\n");
+        fd = accept(sock, (struct sockaddr*)&client, &len);
+        printf("found one");
+        memset(buffer, '\0', RCVBUFSIZE);
+        return false;
+    }else{
+        this->isBufferRead = false;
+        return true;
+    }
 }
 
 void TcpServer::write(std::string data){

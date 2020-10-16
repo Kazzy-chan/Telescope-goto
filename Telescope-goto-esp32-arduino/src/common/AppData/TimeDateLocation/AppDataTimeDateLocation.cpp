@@ -1,6 +1,12 @@
 #include "AppDataTimeDateLocation.h"
 
-AppDataTimeDateLocation::AppDataTimeDateLocation(){}
+AppDataTimeDateLocation::AppDataTimeDateLocation(){
+    this->time = "";
+    this->date = "";
+    this->utcOffset = "";
+    this->latitude = "";
+    this->longitude = "";
+}
 
 void AppDataTimeDateLocation::setTime(std::string time){
     this->time = time;

@@ -7,9 +7,6 @@
 #include "./Lx200RequestHandler/Lx200RequestHandler.h"
 #include "./Lx200Request/Lx200Requests.h"
 #include "./Lx200Request/Lx200Request.h"
-#include "./Lx200Request/GD/Lx200RequestGD.h"
-#include "./Lx200Request/GR/Lx200RequestGR.h"
-#include "./Lx200Request/GVP/Lx200RequestGVP.h"
 #include "./Lx200Response/Lx200Response.h"
 
 
