@@ -2,7 +2,7 @@
 #define __AppProtocolRequestHandler_h__
 
 
-#include "../../../AppData/TimeDateLocation/AppDataTimeDateLocation.h"
+#include "../../../Telescope/Telescope.h"
 
 #include "../AppProtocolRequest/AppProtocolRequest.h"
 
@@ -13,19 +13,25 @@
 #include "../AppProtocolRequest/UtcOffset/UtcOffset.h"
 #include "../AppProtocolRequest/Latitude/Latitude.h"
 #include "../AppProtocolRequest/Longitude/Longitude.h"
+#include "../AppProtocolRequest/CalibrationDec/CalibrationDec.h"
+#include "../AppProtocolRequest/CalibrationRa/CalibrationRa.h"
+#include "../AppProtocolRequest/Move/Move.h"
 
 class AppProtocolRequestHandler{
 private:
-    AppDataTimeDateLocation& appDataTimeDateLocation;
+    Telescope& telescope;
 
     AppProtocolResponse onTimeRequest(AppProtocolRequest*);
     AppProtocolResponse onDateRequest(AppProtocolRequest*);
     AppProtocolResponse onUtcOffsetRequest(AppProtocolRequest*);
     AppProtocolResponse onLatitudeRequest(AppProtocolRequest*);
     AppProtocolResponse onLongitudeRequest(AppProtocolRequest*);
+    AppProtocolResponse onCalibrationDecRequest(AppProtocolRequest*);
+    AppProtocolResponse onCalibrationRaRequest(AppProtocolRequest*);
+    AppProtocolResponse onMoveRequest(AppProtocolRequest*);
 
 public:
-    AppProtocolRequestHandler(AppDataTimeDateLocation& appDataTimeDateLocation);
+    AppProtocolRequestHandler(Telescope& telescope);
     AppProtocolResponse handle(AppProtocolRequest*);
 
 

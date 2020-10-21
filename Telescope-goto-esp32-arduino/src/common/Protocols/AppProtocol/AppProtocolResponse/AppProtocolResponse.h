@@ -13,6 +13,7 @@ class AppProtocolResponse{
         AppProtocolResponse(std::string body);
 
         static AppProtocolResponse ok();
+        static AppProtocolResponse unknown();
 };
 
 #endif

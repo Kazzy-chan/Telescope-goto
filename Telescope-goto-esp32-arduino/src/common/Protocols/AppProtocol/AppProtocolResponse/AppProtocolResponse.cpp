@@ -15,3 +15,7 @@ void AppProtocolResponse::setBody(std::string body){
 AppProtocolResponse AppProtocolResponse::ok(){
     return AppProtocolResponse("ok");
 }
+
+AppProtocolResponse AppProtocolResponse::unknown(){
+    return AppProtocolResponse("unknown");
+}

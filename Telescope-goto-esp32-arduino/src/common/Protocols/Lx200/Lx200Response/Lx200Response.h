@@ -4,6 +4,9 @@
 #include <string>
 #include <stdio.h>
 
+#include "../../../EquatorialCoordinates/Ra/Ra.h"
+#include "../../../EquatorialCoordinates/Dec/Dec.h"
+
 class Lx200Response{
     protected:
         std::string body;
@@ -16,8 +19,8 @@ class Lx200Response{
 
         static Lx200Response null();
 
-        static Lx200Response GD(bool isPositive, int degree, int arcMinutes, int arcSeconds);
-        static Lx200Response GR(int hours, int minutes, int seconds);
+        static Lx200Response GD(Dec);
+        static Lx200Response GR(Ra);
         static Lx200Response GVP(std::string firmwareName); // todo more abstract paramters
         static Lx200Response GVN(std::string firmwareVersion); // todo more abstract paramters
         static Lx200Response GVD(std::string firmwareDate); // todo more abstract paramters

@@ -1,5 +1,5 @@
 #include "ProtocolsManager.h"
-
+ 
 ProtocolsManager::ProtocolsManager(
     ComunicationInterface &comunicationInterface, 
     AppProtocol &appProtocol, 

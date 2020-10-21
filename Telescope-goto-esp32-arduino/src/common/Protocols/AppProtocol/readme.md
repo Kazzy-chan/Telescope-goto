@@ -28,6 +28,14 @@ With this comand one can send the client the latitude. Requierd for Tracking.
 response: ""
 With this comand one can send the client the longitude. Requierd for Tracking.
 
+##### :calibrationRa=HH:MM:SS#
+response: ""
+With this comand one can calibrate the telescope Ra (Homing).
 
+##### :calibrationDec=sDD*MM:SS;
+response: ""
+With this comand one can calibrate the telescope Dec (Homing).
 
-
+##### :move=<motor ID>:<on|off>:(<clockwise|counterclockwise>);
+response: ""
+With this comand one can move the motors clockwise or counterclockwise. The motors move until an "off" comand is send. 

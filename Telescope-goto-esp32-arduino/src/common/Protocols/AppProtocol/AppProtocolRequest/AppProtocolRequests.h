@@ -6,7 +6,10 @@ enum AppProtocolRequests{
     Date,
     UtcOffset,
     Latitude,
-    Longitude
+    Longitude,
+    CalibrationDec,
+    CalibrationRa,
+    Move
 };
 
 

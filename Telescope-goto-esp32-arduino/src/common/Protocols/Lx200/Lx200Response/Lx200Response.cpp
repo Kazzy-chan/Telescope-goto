@@ -17,16 +17,12 @@ void Lx200Response::setBody(std::string body){
     this->body = body + "#";
 }
 
-Lx200Response Lx200Response::GD(bool isPositive, int degree, int arcMinutes, int arcSeconds){
-    char buffer[24] = {};
-    sprintf(buffer, "%c%i*%i:%i", isPositive? '+': '-', degree, arcMinutes, arcSeconds);
-    return Lx200Response(buffer);
+Lx200Response Lx200Response::GD(Dec dec){
+    return Lx200Response(dec.toString());
 }
 
-Lx200Response Lx200Response::GR(int hours, int minutes, int seconds){
-    char buffer[24] = {};
-    sprintf(buffer, "%i:%i:%i", hours, minutes, seconds);
-    return Lx200Response(buffer);
+Lx200Response Lx200Response::GR(Ra ra){
+    return Lx200Response(ra.toString());
 }
 
 Lx200Response Lx200Response::null(){

@@ -2,6 +2,7 @@
 #define __AppProtocol_h__
 
 #include <vector>
+#include "../../Logger.h"
 #include "../IProtocol.h"
 #include "./AppProtocolRequestHandler/AppProtocolRequestHandler.h"
 
@@ -10,6 +11,9 @@
 #include "AppProtocolRequest/UtcOffset/UtcOffset.h"
 #include "AppProtocolRequest/Latitude/Latitude.h"
 #include "AppProtocolRequest/Longitude/Longitude.h"
+#include "AppProtocolRequest/CalibrationDec/CalibrationDec.h"
+#include "AppProtocolRequest/CalibrationRa/CalibrationRa.h"
+#include "AppProtocolRequest/Move/Move.h"
 
 class AppProtocol: public IProtocol{
 private:

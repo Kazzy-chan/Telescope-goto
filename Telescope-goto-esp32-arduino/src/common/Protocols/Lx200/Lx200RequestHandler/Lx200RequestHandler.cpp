@@ -1,14 +1,14 @@
 #include "Lx200RequestHandler.h"
 
-Lx200RequestHandler::Lx200RequestHandler(AppDataTimeDateLocation& appDataTimeDateLocation): appDataTimeDateLocation(appDataTimeDateLocation){
+Lx200RequestHandler::Lx200RequestHandler(Telescope& telescope): telescope(telescope){
 }
 
 Lx200Response Lx200RequestHandler::handle(Lx200Request request){ // todo cases in eigene methoden auslagern 
     switch (request.getType()){
     case Lx200Requests::GD:
-        return Lx200Response::GD(true, 12, 15, 12);
+        return Lx200Response::GD(this->telescope.getLooksAt().getDec());
     case Lx200Requests::GR:
-        return Lx200Response::GR(12,12,34);
+        return Lx200Response::GR(this->telescope.getLooksAt().getRa());
     case Lx200Requests::GVP:
         return Lx200Response::GVP("10micron GM4000HPS");
     case Lx200Requests::GVN:
@@ -18,39 +18,39 @@ Lx200Response Lx200RequestHandler::handle(Lx200Request request){ // todo cases i
     case Lx200Requests::GVT:
         return Lx200Response::GVT("11:10:00");
     case Lx200Requests::Gg:
-        if(appDataTimeDateLocation.getLongitude().empty() == false){
-            return Lx200Response(appDataTimeDateLocation.getLongitude());
+        if(telescope.getCurrentPosition().getLongitude().empty() == false){
+            return Lx200Response(telescope.getCurrentPosition().getLongitude());
         }else{
            return Lx200Response::null(); 
         }
     case Lx200Requests::Gt:
-        if(appDataTimeDateLocation.getLatitude().empty() == false){
-            return Lx200Response(appDataTimeDateLocation.getLatitude());
+        if(telescope.getCurrentPosition().getLatitude().empty() == false){
+            return Lx200Response(telescope.getCurrentPosition().getLatitude());
         }else{
            return Lx200Response::null(); 
         }
     case Lx200Requests::GC:
-        if(appDataTimeDateLocation.getDate().empty() == false){
-            return Lx200Response(appDataTimeDateLocation.getDate());
+        if(telescope.getCurrentDateTime().getDate().empty() == false){
+            return Lx200Response(telescope.getCurrentDateTime().getDate());
         }else{
            return Lx200Response::null(); 
         }
     case Lx200Requests::GL:
-        if(appDataTimeDateLocation.getTime().empty() == false){
-            return Lx200Response(appDataTimeDateLocation.getTime());
+        if(telescope.getCurrentDateTime().getTime().empty() == false){
+            return Lx200Response(telescope.getCurrentDateTime().getTime());
         }else{
            return Lx200Response::null(); 
         }
     case Lx200Requests::GG:
-        if(appDataTimeDateLocation.getUtcOffset().empty() == false){
-            return Lx200Response(appDataTimeDateLocation.getUtcOffset());
+        if(telescope.getCurrentDateTime().getUtcOffset().empty() == false){
+            return Lx200Response(telescope.getCurrentDateTime().getUtcOffset());
         }else{
            return Lx200Response::null(); 
         }
     case Lx200Requests::D:
         return Lx200Response::D("#");
     case Lx200Requests::GW:
-        return Lx200Response::GW("PT1");
+        return Lx200Response::GW("ATH");
     default:
         return Lx200Response::null();
         break;

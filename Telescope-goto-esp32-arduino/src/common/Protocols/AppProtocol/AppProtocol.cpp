@@ -70,6 +70,7 @@ std::string AppProtocol::getComandPayload(std::string comand){
 
 std::string AppProtocol::interpret(std::string msg){
     std::vector<std::string> comands = this->extractComand(msg);
+    AppProtocolResponse response = AppProtocolResponse::unknown();
     for (std::string comand : comands){
         std::string type = this->getComandType(comand);
         logger.LOG_I("type", type);
@@ -88,10 +89,18 @@ std::string AppProtocol::interpret(std::string msg){
             request = new AppRequests::Latitude(payload);
         }else if(type == "longitude"){
             request = new AppRequests::Longitude(payload);
+        }else if(type == "calibrationRa"){
+            request = new AppRequests::CalibrationRa(payload);
+        }else if(type == "calibrationDec"){
+            request = new AppRequests::CalibrationDec(payload);
+        }else if(type == "move"){
+            request = new AppRequests::Move(payload);
         }
-        AppProtocolResponse response = this->requestHandler.handle(request);
-        delete request;
-        return response.getBody();
+
+        if(request != nullptr){
+            response = this->requestHandler.handle(request);
+            delete request;
+        }
     }
-    return "";
+    return response.getBody();
 }

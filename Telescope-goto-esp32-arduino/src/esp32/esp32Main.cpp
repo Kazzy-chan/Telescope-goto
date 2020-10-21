@@ -1,7 +1,11 @@
+#include <memory>
+
 #include "./esp32/Bluetooth/BluetoothComunicationInterface.h"
 #include "../common/Protocols/ProtocolsManager.h"
 
-#include "../common/AppData/TimeDateLocation/AppDataTimeDateLocation.h"
+#include "../common/Telescope/Telescope.h"
+
+#include "../common/EquatorialCoordinates/EquatorialCoordinates.h"
 
 #include "../common/Protocols/Lx200/Lx200RequestHandler/Lx200RequestHandler.h"
 #include "../common/Protocols/Lx200/Lx200.h"
@@ -14,10 +18,10 @@
 
 BluetoothComunicationInterface comunicationInterface;
 
-AppDataTimeDateLocation appDataTimeDateLocation;
+Telescope telescope;
 
-Lx200RequestHandler lx200RequestHandler(appDataTimeDateLocation);
-AppProtocolRequestHandler appProtocolRequestHandler(appDataTimeDateLocation);
+Lx200RequestHandler lx200RequestHandler(telescope);
+AppProtocolRequestHandler appProtocolRequestHandler(telescope);
 
 Lx200 lx200(lx200RequestHandler);
 AppProtocol appProtocol(appProtocolRequestHandler);
@@ -32,5 +36,6 @@ void setup(){
 
 void loop(){
     protocolsManager.loop();
+    
 }
 
