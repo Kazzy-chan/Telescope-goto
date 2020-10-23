@@ -1,6 +1,6 @@
 #include "Telescope.h"
 
-Telescope::Telescope(): looksAt(EquatorialCoordinates::polarStar()), currentPosition(Position::unknown()), currentDateTime(DateTime::unknown()){}
+Telescope::Telescope(StepperManager& stepperManager): stepperManager(stepperManager), looksAt(EquatorialCoordinates::polarStar()), currentPosition(Position::unknown()), currentDateTime(DateTime::unknown()){}
 
 EquatorialCoordinates& Telescope::getLooksAt(){
     return this->looksAt;
@@ -14,10 +14,10 @@ DateTime& Telescope::getCurrentDateTime(){
     return this->currentDateTime;
 }
 
-Constraints& Telescope::getMotor1Constraints(){
-    return this->motor1Constraints;
+Constraints& Telescope::getStepper1Constraints(){
+    return this->stepperManager.getStepper1().getConstraints();
 }
 
-Constraints& Telescope::getMotor2Constraints(){
-    return this->motor2Constraints;
+Constraints& Telescope::getStepper2Constraints(){
+    return this->stepperManager.getStepper2().getConstraints();
 }

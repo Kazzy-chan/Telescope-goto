@@ -3,6 +3,20 @@
     
 Dec::Dec(char sign, int degrees, int arcminutes, int arcseconds): sign(sign), degrees(degrees), arcminutes(arcminutes), arcseconds(arcseconds){}
 
+
+Dec Dec::operator+ (const Dec& other){
+    //todo
+}
+
+Dec Dec::operator- (const Dec& other){
+ //todo
+}
+
+float Dec::toDegree(){
+    // todo
+    return 0.1;
+}
+
 //-22*27:57
 void Dec::update(std::string str){
     sign = str[0];

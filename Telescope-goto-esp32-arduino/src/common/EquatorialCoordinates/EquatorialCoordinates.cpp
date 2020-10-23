@@ -9,6 +9,14 @@ EquatorialCoordinates EquatorialCoordinates::polarStar(){
     return EquatorialCoordinates(Ra::fromString("02:33:33"), Dec::fromString("+89*15:48"));
 }
 
+EquatorialCoordinates EquatorialCoordinates::operator+ (const EquatorialCoordinates& other){
+    return EquatorialCoordinates(this->ra + other.ra, this->dec + other.dec);
+}  
+
+EquatorialCoordinates EquatorialCoordinates::operator- (const EquatorialCoordinates& other){
+    return EquatorialCoordinates(this->ra - other.ra, this->dec - other.dec);
+}
+
 Ra EquatorialCoordinates::getRa(){
     return this->ra;
 }

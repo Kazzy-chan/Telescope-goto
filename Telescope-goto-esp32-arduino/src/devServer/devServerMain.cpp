@@ -1,7 +1,11 @@
 #include "TcpServer/TcpServer.h"
 #include "../common/Protocols/ProtocolsManager.h"
 
+#include "../common/StepperManager/StepperManager.h"
+
 #include "../common/Telescope/Telescope.h"
+
+#include "../common/EquatorialCoordinates/EquatorialCoordinates.h"
 
 #include "../common/Protocols/Lx200/Lx200RequestHandler/Lx200RequestHandler.h"
 #include "../common/Protocols/Lx200/Lx200.h"
@@ -14,7 +18,9 @@
 
 TcpServer comunicationInterface;
 
-Telescope telescope;
+StepperManager stepperManager;
+
+Telescope telescope(stepperManager);
 
 Lx200RequestHandler lx200RequestHandler(telescope);
 AppProtocolRequestHandler appProtocolRequestHandler(telescope);
@@ -32,5 +38,4 @@ void setup(){
 
 void loop(){
     protocolsManager.loop();
-    
 }

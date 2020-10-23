@@ -4,6 +4,19 @@ Ra::Ra(int hours, int minutes, int seconds): hours(hours), minutes(minutes), sec
 
 }
 
+Ra Ra::operator+ (const Ra& other){
+ // todo 
+}
+
+Ra Ra::operator- (const Ra& other){
+     // todo 
+}
+
+float Ra::toDegree(){
+    // todo
+    return 0.1;
+}
+
 //12:12:12
 void Ra::update(std::string str){
     hours = atoi(str.substr(0,2).c_str());

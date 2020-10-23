@@ -12,6 +12,9 @@ public:
     EquatorialCoordinates(Ra ra, Dec dec);
     static EquatorialCoordinates polarStar();
 
+    EquatorialCoordinates operator+ (const EquatorialCoordinates& other);
+    EquatorialCoordinates operator- (const EquatorialCoordinates& other);
+
     Ra getRa();
     Dec getDec();
 

@@ -1,7 +1,7 @@
-#include <memory>
-
 #include "./esp32/Bluetooth/BluetoothComunicationInterface.h"
 #include "../common/Protocols/ProtocolsManager.h"
+
+#include "../common/StepperManager/StepperManager.h"
 
 #include "../common/Telescope/Telescope.h"
 
@@ -18,7 +18,9 @@
 
 BluetoothComunicationInterface comunicationInterface;
 
-Telescope telescope;
+StepperManager stepperManager;
+
+Telescope telescope(stepperManager);
 
 Lx200RequestHandler lx200RequestHandler(telescope);
 AppProtocolRequestHandler appProtocolRequestHandler(telescope);
@@ -36,6 +38,5 @@ void setup(){
 
 void loop(){
     protocolsManager.loop();
-    
 }
 

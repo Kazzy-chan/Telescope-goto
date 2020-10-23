@@ -10,7 +10,7 @@ std::string StellariumProtocolSelector::interpret(std::string msg){
     lx200Match += 0x06;
 
     if (msg == lx200Match){
-        return "P";
+        return "#";
     }
 
     return "";

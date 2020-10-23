@@ -76,12 +76,12 @@ AppProtocolResponse AppProtocolRequestHandler::onMoveRequest(AppProtocolRequest*
 
 AppProtocolResponse AppProtocolRequestHandler::onConstraintTopRequest(AppProtocolRequest* request){
     AppRequests::ConstraintTop* constraintTop = dynamic_cast<AppRequests::ConstraintTop*>(request);
-    this->telescope.getMotor1Constraints().setTopConstraint(); // todo second motor
+    this->telescope.getStepper1Constraints().setTopConstraint(); // todo second motor
     return AppProtocolResponse::ok();
 }
 
 AppProtocolResponse AppProtocolRequestHandler::onConstraintBottomRequest(AppProtocolRequest* request){
     AppRequests::ConstraintBottom* constraintBottom = dynamic_cast<AppRequests::ConstraintBottom*>(request);
-    this->telescope.getMotor1Constraints().setBottomConstraint(); // todo second motor
+    this->telescope.getStepper1Constraints().setBottomConstraint(); // todo second motor
     return AppProtocolResponse::ok();
 }

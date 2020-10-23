@@ -15,6 +15,10 @@ public:
     Dec(char sign, int degrees, int arcminutes, int arcseconds);
     static Dec fromString(std::string);
 
+    Dec operator+ (const Dec& other);
+    Dec operator- (const Dec& other);
+
+    float toDegree();
     void update(std::string);
     std::string toString();
 };
