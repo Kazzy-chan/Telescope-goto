@@ -20,6 +20,10 @@ AppProtocolResponse AppProtocolRequestHandler::handle(AppProtocolRequest* reques
         return this->onCalibrationRaRequest(request);
     case AppProtocolRequests::Move:
         return this->onMoveRequest(request);
+    case AppProtocolRequests::ConstraintTop:
+        return this->onConstraintTopRequest(request);
+    case AppProtocolRequests::ConstraintBottom:
+        return this->onConstraintBottomRequest(request);
     }
 }
 
@@ -67,5 +71,17 @@ AppProtocolResponse AppProtocolRequestHandler::onCalibrationRaRequest(AppProtoco
 
 AppProtocolResponse AppProtocolRequestHandler::onMoveRequest(AppProtocolRequest* request){
     AppRequests::Move* move = dynamic_cast<AppRequests::Move*>(request);
+    return AppProtocolResponse::ok();
+}
+
+AppProtocolResponse AppProtocolRequestHandler::onConstraintTopRequest(AppProtocolRequest* request){
+    AppRequests::ConstraintTop* constraintTop = dynamic_cast<AppRequests::ConstraintTop*>(request);
+    this->telescope.getMotor1Constraints().setTopConstraint(); // todo second motor
+    return AppProtocolResponse::ok();
+}
+
+AppProtocolResponse AppProtocolRequestHandler::onConstraintBottomRequest(AppProtocolRequest* request){
+    AppRequests::ConstraintBottom* constraintBottom = dynamic_cast<AppRequests::ConstraintBottom*>(request);
+    this->telescope.getMotor1Constraints().setBottomConstraint(); // todo second motor
     return AppProtocolResponse::ok();
 }

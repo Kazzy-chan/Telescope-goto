@@ -16,6 +16,8 @@
 #include "../AppProtocolRequest/CalibrationDec/CalibrationDec.h"
 #include "../AppProtocolRequest/CalibrationRa/CalibrationRa.h"
 #include "../AppProtocolRequest/Move/Move.h"
+#include "../AppProtocolRequest/ConstraintTop/ConstraintTop.h"
+#include "../AppProtocolRequest/ConstraintBottom/ConstraintBottom.h"
 
 class AppProtocolRequestHandler{
 private:
@@ -29,6 +31,8 @@ private:
     AppProtocolResponse onCalibrationDecRequest(AppProtocolRequest*);
     AppProtocolResponse onCalibrationRaRequest(AppProtocolRequest*);
     AppProtocolResponse onMoveRequest(AppProtocolRequest*);
+    AppProtocolResponse onConstraintTopRequest(AppProtocolRequest*);
+    AppProtocolResponse onConstraintBottomRequest(AppProtocolRequest*);
 
 public:
     AppProtocolRequestHandler(Telescope& telescope);

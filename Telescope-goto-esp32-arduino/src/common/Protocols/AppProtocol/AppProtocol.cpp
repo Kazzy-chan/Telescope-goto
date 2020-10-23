@@ -95,6 +95,10 @@ std::string AppProtocol::interpret(std::string msg){
             request = new AppRequests::CalibrationDec(payload);
         }else if(type == "move"){
             request = new AppRequests::Move(payload);
+        }else if(type == "constraintTop"){
+            request = new AppRequests::Move(payload);
+        }else if(type == "constraintBottom"){
+            request = new AppRequests::Move(payload);
         }
 
         if(request != nullptr){

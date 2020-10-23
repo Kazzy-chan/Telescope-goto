@@ -13,3 +13,11 @@ Position& Telescope::getCurrentPosition(){
 DateTime& Telescope::getCurrentDateTime(){
     return this->currentDateTime;
 }
+
+Constraints& Telescope::getMotor1Constraints(){
+    return this->motor1Constraints;
+}
+
+Constraints& Telescope::getMotor2Constraints(){
+    return this->motor2Constraints;
+}

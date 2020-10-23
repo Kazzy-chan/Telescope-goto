@@ -9,7 +9,9 @@ enum AppProtocolRequests{
     Longitude,
     CalibrationDec,
     CalibrationRa,
-    Move
+    Move,
+    ConstraintTop,
+    ConstraintBottom
 };
 
 
