@@ -1,0 +1,1768 @@
+{
+	"version": 24,
+	"artboards": [
+		{
+			"name": "Artboard",
+			"translation": [
+				-32,
+				9
+			],
+			"width": 203.6,
+			"height": 304,
+			"origin": [
+				-1.2000000476837158,
+				-0.7200000286102295
+			],
+			"clipContents": true,
+			"color": [
+				0.364705890417099,
+				0.364705890417099,
+				0.364705890417099,
+				1
+			],
+			"nodes": [
+				{
+					"name": "Rectangle",
+					"translation": [
+						387.9700012207031,
+						432.5681457519531
+					],
+					"rotation": -0.5235987755982989,
+					"scale": [
+						1,
+						1.0001798868179321
+					],
+					"opacity": 1,
+					"isCollapsed": false,
+					"clips": [],
+					"isVisible": true,
+					"blendMode": 3,
+					"drawOrder": 8,
+					"transformAffectsStroke": false,
+					"type": "shape"
+				},
+				{
+					"name": "Rectangle Path",
+					"parent": 0,
+					"translation": [
+						0,
+						0
+					],
+					"rotation": 0,
+					"scale": [
+						1,
+						1
+					],
+					"opacity": 1,
+					"isCollapsed": false,
+					"clips": [],
+					"width": 10,
+					"height": 150,
+					"cornerRadius": 0,
+					"type": "rectangle"
+				},
+				{
+					"name": "Color",
+					"parent": 0,
+					"opacity": 1,
+					"numColorStops": 2,
+					"colorStops": [
+						0.8357142806053162,
+						0.8357142806053162,
+						0.8357142806053162,
+						1,
+						0,
+						0.6499999761581421,
+						0.6499999761581421,
+						0.6499999761581421,
+						1,
+						1
+					],
+					"start": [
+						53.540740966796875,
+						-36.89773178100586
+					],
+					"end": [
+						-36.43913269042969,
+						26.117704391479492
+					],
+					"fillRule": 1,
+					"type": "gradientFill"
+				},
+				{
+					"name": "Rectangle",
+					"translation": [
+						305.39794921875,
+						432.5681457519531
+					],
+					"rotation": 0.5235987755982988,
+					"scale": [
+						1,
+						1
+					],
+					"opacity": 1,
+					"isCollapsed": false,
+					"clips": [],
+					"isVisible": true,
+					"blendMode": 3,
+					"drawOrder": 6,
+					"transformAffectsStroke": false,
+					"type": "shape"
+				},
+				{
+					"name": "Rectangle Path",
+					"parent": 3,
+					"translation": [
+						0,
+						0
+					],
+					"rotation": 0,
+					"scale": [
+						1,
+						1
+					],
+					"opacity": 1,
+					"isCollapsed": false,
+					"clips": [],
+					"width": 10,
+					"height": 150,
+					"cornerRadius": 0,
+					"type": "rectangle"
+				},
+				{
+					"name": "Color",
+					"parent": 3,
+					"opacity": 1,
+					"numColorStops": 2,
+					"colorStops": [
+						0.8357142806053162,
+						0.8357142806053162,
+						0.8357142806053162,
+						1,
+						0,
+						0.6509804129600525,
+						0.6509804129600525,
+						0.6509804129600525,
+						1,
+						1
+					],
+					"start": [
+						75.64265441894531,
+						-88.43944549560547
+					],
+					"end": [
+						-30.455720901489258,
+						41.03825378417969
+					],
+					"fillRule": 1,
+					"type": "gradientFill"
+				},
+				{
+					"name": "Rectangle",
+					"translation": [
+						346.0789794921875,
+						427.3169250488281
+					],
+					"rotation": 0,
+					"scale": [
+						0.800000011920929,
+						0.821999728679657
+					],
+					"opacity": 1,
+					"isCollapsed": false,
+					"clips": [],
+					"isVisible": true,
+					"blendMode": 3,
+					"drawOrder": 4,
+					"transformAffectsStroke": false,
+					"type": "shape"
+				},
+				{
+					"name": "Rectangle Path",
+					"parent": 6,
+					"translation": [
+						0,
+						0
+					],
+					"rotation": 0,
+					"scale": [
+						1,
+						1
+					],
+					"opacity": 1,
+					"isCollapsed": false,
+					"clips": [],
+					"width": 10,
+					"height": 150,
+					"cornerRadius": 0,
+					"type": "rectangle"
+				},
+				{
+					"name": "Color",
+					"parent": 6,
+					"opacity": 1,
+					"numColorStops": 2,
+					"colorStops": [
+						0.8357142806053162,
+						0.8357142806053162,
+						0.8357142806053162,
+						1,
+						0,
+						0.6509804129600525,
+						0.6509804129600525,
+						0.6509804129600525,
+						1,
+						1
+					],
+					"start": [
+						57.11139678955078,
+						-43.14789581298828
+					],
+					"end": [
+						-34.1094970703125,
+						47.10256576538086
+					],
+					"fillRule": 1,
+					"type": "gradientFill"
+				},
+				{
+					"name": "Rectangle",
+					"translation": [
+						346.1623229980469,
+						375.0681457519531
+					],
+					"rotation": 0,
+					"scale": [
+						1,
+						1
+					],
+					"opacity": 1,
+					"isCollapsed": false,
+					"clips": [],
+					"isVisible": true,
+					"blendMode": 3,
+					"drawOrder": 10,
+					"transformAffectsStroke": false,
+					"type": "shape"
+				},
+				{
+					"name": "Rectangle Path",
+					"parent": 9,
+					"translation": [
+						0,
+						0
+					],
+					"rotation": 0,
+					"scale": [
+						1,
+						1
+					],
+					"opacity": 1,
+					"isCollapsed": false,
+					"clips": [],
+					"width": 18,
+					"height": 20,
+					"cornerRadius": 0,
+					"type": "rectangle"
+				},
+				{
+					"name": "Color",
+					"parent": 9,
+					"opacity": 1,
+					"numColorStops": 2,
+					"colorStops": [
+						1,
+						1,
+						1,
+						1,
+						0,
+						0.7595238089561462,
+						0.7595238089561462,
+						0.7595238089561462,
+						1,
+						1
+					],
+					"start": [
+						88.36105346679688,
+						-69.14486694335938
+					],
+					"end": [
+						-7.125885009765625,
+						3.58673095703125
+					],
+					"fillRule": 1,
+					"type": "gradientFill"
+				},
+				{
+					"name": "Ellipse",
+					"translation": [
+						346.1606140136719,
+						358.0875244140625
+					],
+					"rotation": 0,
+					"scale": [
+						1,
+						1
+					],
+					"opacity": 1,
+					"isCollapsed": false,
+					"clips": [],
+					"isVisible": true,
+					"blendMode": 3,
+					"drawOrder": 25,
+					"transformAffectsStroke": false,
+					"type": "shape"
+				},
+				{
+					"name": "Color",
+					"parent": 12,
+					"opacity": 1,
+					"color": [
+						0.20714285969734192,
+						0.20714285969734192,
+						0.20714285969734192,
+						1
+					],
+					"fillRule": 1,
+					"type": "colorFill"
+				},
+				{
+					"name": "Ellipse Path",
+					"parent": 12,
+					"translation": [
+						0,
+						0
+					],
+					"rotation": 0,
+					"scale": [
+						1,
+						1
+					],
+					"opacity": 1,
+					"isCollapsed": false,
+					"clips": [],
+					"width": 10,
+					"height": 10,
+					"type": "ellipse"
+				},
+				{
+					"name": "Color",
+					"parent": 12,
+					"opacity": 1,
+					"numColorStops": 2,
+					"colorStops": [
+						1,
+						1,
+						1,
+						1,
+						0,
+						0.6509804129600525,
+						0.6509804129600525,
+						0.6509804129600525,
+						1,
+						1
+					],
+					"start": [
+						103.32540893554688,
+						-47.042755126953125
+					],
+					"end": [
+						-83.3729248046875,
+						31.36578369140625
+					],
+					"width": 2,
+					"cap": 0,
+					"join": 0,
+					"trim": 0,
+					"type": "gradientStroke"
+				},
+				{
+					"name": "Rectangle",
+					"translation": [
+						345.7303466796875,
+						363.3644714355469
+					],
+					"rotation": 0,
+					"scale": [
+						1,
+						1
+					],
+					"opacity": 1,
+					"isCollapsed": false,
+					"clips": [],
+					"isVisible": true,
+					"blendMode": 3,
+					"drawOrder": 24,
+					"transformAffectsStroke": false,
+					"type": "shape"
+				},
+				{
+					"name": "Rectangle Path",
+					"parent": 16,
+					"translation": [
+						0,
+						0
+					],
+					"rotation": 0,
+					"scale": [
+						1,
+						1
+					],
+					"opacity": 1,
+					"isCollapsed": false,
+					"clips": [],
+					"width": 12,
+					"height": 12,
+					"cornerRadius": 0,
+					"type": "rectangle"
+				},
+				{
+					"name": "Color",
+					"parent": 16,
+					"opacity": 1,
+					"numColorStops": 2,
+					"colorStops": [
+						1,
+						1,
+						1,
+						1,
+						0,
+						0.7595238089561462,
+						0.7595238089561462,
+						0.7595238089561462,
+						1,
+						1
+					],
+					"start": [
+						87.6739501953125,
+						-26.278350830078125
+					],
+					"end": [
+						-7.455291748046875,
+						13.157012939453125
+					],
+					"fillRule": 1,
+					"type": "gradientFill"
+				},
+				{
+					"name": "Color",
+					"parent": 16,
+					"opacity": 1,
+					"numColorStops": 2,
+					"colorStops": [
+						0.9490196108818054,
+						0.9490196108818054,
+						0.9490196108818054,
+						1,
+						0,
+						0.6509804129600525,
+						0.6509804129600525,
+						0.6509804129600525,
+						1,
+						1
+					],
+					"start": [
+						96.19952392578125,
+						-35.928741455078125
+					],
+					"end": [
+						-86.2232666015625,
+						29.51544189453125
+					],
+					"secondaryRadiusScale": 1,
+					"width": 1,
+					"cap": 0,
+					"join": 0,
+					"trim": 0,
+					"type": "radialGradientStroke"
+				},
+				{
+					"name": "Rectangle",
+					"translation": [
+						387.9700012207031,
+						432.5681457519531
+					],
+					"rotation": -0.5235987755982989,
+					"scale": [
+						1,
+						1.0001798868179321
+					],
+					"opacity": 1,
+					"isCollapsed": false,
+					"clips": [],
+					"isVisible": true,
+					"blendMode": 3,
+					"drawOrder": 9,
+					"transformAffectsStroke": false,
+					"type": "shape"
+				},
+				{
+					"name": "Rectangle Path",
+					"parent": 20,
+					"translation": [
+						0,
+						0
+					],
+					"rotation": 0,
+					"scale": [
+						1,
+						1
+					],
+					"opacity": 1,
+					"isCollapsed": false,
+					"clips": [],
+					"width": 12,
+					"height": 5,
+					"cornerRadius": 0,
+					"type": "rectangle"
+				},
+				{
+					"name": "Color",
+					"parent": 20,
+					"opacity": 1,
+					"color": [
+						0.2078431397676468,
+						0.2078431397676468,
+						0.2078431397676468,
+						1
+					],
+					"fillRule": 1,
+					"type": "colorFill"
+				},
+				{
+					"name": "Rectangle",
+					"translation": [
+						346.0789794921875,
+						427.3169250488281
+					],
+					"rotation": 0,
+					"scale": [
+						0.800000011920929,
+						0.821999728679657
+					],
+					"opacity": 1,
+					"isCollapsed": false,
+					"clips": [],
+					"isVisible": true,
+					"blendMode": 3,
+					"drawOrder": 5,
+					"transformAffectsStroke": false,
+					"type": "shape"
+				},
+				{
+					"name": "Rectangle Path",
+					"parent": 23,
+					"translation": [
+						0,
+						0
+					],
+					"rotation": 0,
+					"scale": [
+						1,
+						1
+					],
+					"opacity": 1,
+					"isCollapsed": false,
+					"clips": [],
+					"width": 12,
+					"height": 5,
+					"cornerRadius": 0,
+					"type": "rectangle"
+				},
+				{
+					"name": "Color",
+					"parent": 23,
+					"opacity": 1,
+					"color": [
+						0.2078431397676468,
+						0.2078431397676468,
+						0.2078431397676468,
+						1
+					],
+					"fillRule": 1,
+					"type": "colorFill"
+				},
+				{
+					"name": "Rectangle",
+					"translation": [
+						305.39794921875,
+						432.5681457519531
+					],
+					"rotation": 0.5235987755982988,
+					"scale": [
+						1,
+						1
+					],
+					"opacity": 1,
+					"isCollapsed": false,
+					"clips": [],
+					"isVisible": true,
+					"blendMode": 3,
+					"drawOrder": 7,
+					"transformAffectsStroke": false,
+					"type": "shape"
+				},
+				{
+					"name": "Rectangle Path",
+					"parent": 26,
+					"translation": [
+						0,
+						0
+					],
+					"rotation": 0,
+					"scale": [
+						1,
+						1
+					],
+					"opacity": 1,
+					"isCollapsed": false,
+					"clips": [],
+					"width": 12,
+					"height": 5,
+					"cornerRadius": 0,
+					"type": "rectangle"
+				},
+				{
+					"name": "Color",
+					"parent": 26,
+					"opacity": 1,
+					"color": [
+						0.2078431397676468,
+						0.2078431397676468,
+						0.2078431397676468,
+						1
+					],
+					"fillRule": 1,
+					"type": "colorFill"
+				},
+				{
+					"name": "Ellipse",
+					"translation": [
+						268.56451416015625,
+						496.5484313964844
+					],
+					"rotation": 0,
+					"scale": [
+						1,
+						1
+					],
+					"opacity": 1,
+					"isCollapsed": false,
+					"clips": [],
+					"isVisible": true,
+					"blendMode": 3,
+					"drawOrder": 3,
+					"transformAffectsStroke": false,
+					"type": "shape"
+				},
+				{
+					"name": "Color",
+					"parent": 29,
+					"opacity": 1,
+					"color": [
+						0.2078431397676468,
+						0.2078431397676468,
+						0.2078431397676468,
+						1
+					],
+					"fillRule": 1,
+					"type": "colorFill"
+				},
+				{
+					"name": "Ellipse Path",
+					"parent": 29,
+					"translation": [
+						0,
+						0
+					],
+					"rotation": 0,
+					"scale": [
+						1,
+						1
+					],
+					"opacity": 1,
+					"isCollapsed": false,
+					"clips": [],
+					"width": 10,
+					"height": 10,
+					"type": "ellipse"
+				},
+				{
+					"name": "Ellipse",
+					"translation": [
+						345.9838562011719,
+						487.8065185546875
+					],
+					"rotation": 0,
+					"scale": [
+						0.800000011920929,
+						0.800000011920929
+					],
+					"opacity": 1,
+					"isCollapsed": false,
+					"clips": [],
+					"isVisible": true,
+					"blendMode": 3,
+					"drawOrder": 2,
+					"transformAffectsStroke": false,
+					"type": "shape"
+				},
+				{
+					"name": "Color",
+					"parent": 32,
+					"opacity": 1,
+					"color": [
+						0.2078431397676468,
+						0.2078431397676468,
+						0.2078431397676468,
+						1
+					],
+					"fillRule": 1,
+					"type": "colorFill"
+				},
+				{
+					"name": "Ellipse Path",
+					"parent": 32,
+					"translation": [
+						0,
+						0
+					],
+					"rotation": 0,
+					"scale": [
+						1,
+						1
+					],
+					"opacity": 1,
+					"isCollapsed": false,
+					"clips": [],
+					"width": 10,
+					"height": 10,
+					"type": "ellipse"
+				},
+				{
+					"name": "Ellipse",
+					"translation": [
+						425.3387145996094,
+						497.5162048339844
+					],
+					"rotation": 0,
+					"scale": [
+						1,
+						1
+					],
+					"opacity": 1,
+					"isCollapsed": false,
+					"clips": [],
+					"isVisible": true,
+					"blendMode": 3,
+					"drawOrder": 1,
+					"transformAffectsStroke": false,
+					"type": "shape"
+				},
+				{
+					"name": "Color",
+					"parent": 35,
+					"opacity": 1,
+					"color": [
+						0.2078431397676468,
+						0.2078431397676468,
+						0.2078431397676468,
+						1
+					],
+					"fillRule": 1,
+					"type": "colorFill"
+				},
+				{
+					"name": "Ellipse Path",
+					"parent": 35,
+					"translation": [
+						0,
+						0
+					],
+					"rotation": 0,
+					"scale": [
+						1,
+						1
+					],
+					"opacity": 1,
+					"isCollapsed": false,
+					"clips": [],
+					"width": 10,
+					"height": 10,
+					"type": "ellipse"
+				},
+				{
+					"name": "Node",
+					"translation": [
+						346.44317626953125,
+						357.98077392578125
+					],
+					"rotation": 0,
+					"scale": [
+						1,
+						1
+					],
+					"opacity": 1,
+					"isCollapsed": false,
+					"clips": [],
+					"type": "node"
+				},
+				{
+					"name": "Rectangle",
+					"parent": 38,
+					"translation": [
+						-1.07342529296875,
+						-12.0389404296875
+					],
+					"rotation": 0.943124237957351,
+					"scale": [
+						1,
+						1
+					],
+					"opacity": 1,
+					"isCollapsed": false,
+					"clips": [],
+					"isVisible": true,
+					"blendMode": 3,
+					"drawOrder": 12,
+					"transformAffectsStroke": false,
+					"type": "shape"
+				},
+				{
+					"name": "Rectangle Path",
+					"parent": 39,
+					"translation": [
+						0,
+						0
+					],
+					"rotation": 0,
+					"scale": [
+						1,
+						1
+					],
+					"opacity": 1,
+					"isCollapsed": false,
+					"clips": [],
+					"width": 20,
+					"height": 30,
+					"cornerRadius": 0,
+					"type": "rectangle"
+				},
+				{
+					"name": "Color",
+					"parent": 39,
+					"opacity": 1,
+					"numColorStops": 2,
+					"colorStops": [
+						1,
+						1,
+						1,
+						1,
+						0,
+						0.7595238089561462,
+						0.7595238089561462,
+						0.7595238089561462,
+						1,
+						1
+					],
+					"start": [
+						-25.40735626220703,
+						-97.24311828613281
+					],
+					"end": [
+						-9.281636238098145,
+						2.8032352924346924
+					],
+					"fillRule": 1,
+					"type": "gradientFill"
+				},
+				{
+					"name": "Rectangle",
+					"parent": 38,
+					"translation": [
+						7.334228515625,
+						-17.493743896484375
+					],
+					"rotation": -0.6254520804608896,
+					"scale": [
+						1,
+						1
+					],
+					"opacity": 1,
+					"isCollapsed": false,
+					"clips": [],
+					"isVisible": true,
+					"blendMode": 3,
+					"drawOrder": 15,
+					"transformAffectsStroke": false,
+					"type": "shape"
+				},
+				{
+					"name": "Rectangle Path",
+					"parent": 42,
+					"translation": [
+						0,
+						0
+					],
+					"rotation": 0,
+					"scale": [
+						1,
+						1
+					],
+					"opacity": 1,
+					"isCollapsed": false,
+					"clips": [],
+					"width": 10,
+					"height": 50,
+					"cornerRadius": 0,
+					"type": "rectangle"
+				},
+				{
+					"name": "Color",
+					"parent": 42,
+					"opacity": 1,
+					"numColorStops": 2,
+					"colorStops": [
+						1,
+						1,
+						1,
+						1,
+						0,
+						0.7595238089561462,
+						0.7595238089561462,
+						0.7595238089561462,
+						1,
+						1
+					],
+					"start": [
+						65.18424224853516,
+						-26.842742919921875
+					],
+					"end": [
+						-14.338431358337402,
+						-13.356297492980957
+					],
+					"fillRule": 1,
+					"type": "gradientFill"
+				},
+				{
+					"name": "Rectangle",
+					"parent": 38,
+					"translation": [
+						-8.46240234375,
+						-44.666595458984375
+					],
+					"rotation": 0.931317052325195,
+					"scale": [
+						1,
+						0.8029999732971191
+					],
+					"opacity": 1,
+					"isCollapsed": false,
+					"clips": [],
+					"isVisible": true,
+					"blendMode": 3,
+					"drawOrder": 16,
+					"transformAffectsStroke": false,
+					"type": "shape"
+				},
+				{
+					"name": "Rectangle Path",
+					"parent": 45,
+					"translation": [
+						0,
+						0
+					],
+					"rotation": 0,
+					"scale": [
+						1,
+						1
+					],
+					"opacity": 1,
+					"isCollapsed": false,
+					"clips": [],
+					"bones": [],
+					"isVisible": true,
+					"isClosed": true,
+					"points": [
+						{
+							"pointType": 0,
+							"translation": [
+								-11,
+								-18
+							],
+							"radius": 0
+						},
+						{
+							"pointType": 0,
+							"translation": [
+								11,
+								-18
+							],
+							"radius": 0
+						},
+						{
+							"pointType": 0,
+							"translation": [
+								4.41652250289917,
+								17.99941062927246
+							],
+							"radius": 0
+						},
+						{
+							"pointType": 0,
+							"translation": [
+								-3.9700939655303955,
+								17.999332427978516
+							],
+							"radius": 0
+						}
+					],
+					"type": "path"
+				},
+				{
+					"name": "Color",
+					"parent": 45,
+					"opacity": 1,
+					"numColorStops": 2,
+					"colorStops": [
+						1,
+						1,
+						1,
+						1,
+						0,
+						0.7595238089561462,
+						0.7595238089561462,
+						0.7595238089561462,
+						1,
+						1
+					],
+					"start": [
+						23.383594512939453,
+						-107.69113159179688
+					],
+					"end": [
+						-8.645914077758789,
+						21.73729705810547
+					],
+					"fillRule": 1,
+					"type": "gradientFill"
+				},
+				{
+					"name": "Rectangle",
+					"parent": 38,
+					"translation": [
+						19.616912841796875,
+						-62.251861572265625
+					],
+					"rotation": -0.6374765447517833,
+					"scale": [
+						1,
+						1
+					],
+					"opacity": 1,
+					"isCollapsed": false,
+					"clips": [],
+					"isVisible": true,
+					"blendMode": 3,
+					"drawOrder": 17,
+					"transformAffectsStroke": false,
+					"type": "shape"
+				},
+				{
+					"name": "Rectangle Path",
+					"parent": 48,
+					"translation": [
+						0,
+						0
+					],
+					"rotation": 0,
+					"scale": [
+						1,
+						1
+					],
+					"opacity": 1,
+					"isCollapsed": false,
+					"clips": [],
+					"width": 38,
+					"height": 122,
+					"cornerRadius": 0,
+					"type": "rectangle"
+				},
+				{
+					"name": "Color",
+					"parent": 48,
+					"opacity": 1,
+					"numColorStops": 2,
+					"colorStops": [
+						1,
+						1,
+						1,
+						1,
+						0,
+						0.7595238089561462,
+						0.7595238089561462,
+						0.7595238089561462,
+						1,
+						1
+					],
+					"start": [
+						53.204307556152344,
+						-9.364128112792969
+					],
+					"end": [
+						-22.655649185180664,
+						-27.557701110839844
+					],
+					"fillRule": 1,
+					"type": "gradientFill"
+				},
+				{
+					"name": "Rectangle",
+					"parent": 38,
+					"translation": [
+						66.14697265625,
+						-47.53692626953125
+					],
+					"rotation": -0.6374765447517833,
+					"scale": [
+						1,
+						1
+					],
+					"opacity": 1,
+					"isCollapsed": false,
+					"clips": [],
+					"isVisible": true,
+					"blendMode": 3,
+					"drawOrder": 22,
+					"transformAffectsStroke": false,
+					"type": "shape"
+				},
+				{
+					"name": "Rectangle Path",
+					"parent": 51,
+					"translation": [
+						0,
+						0
+					],
+					"rotation": 0,
+					"scale": [
+						1,
+						1
+					],
+					"opacity": 1,
+					"isCollapsed": false,
+					"clips": [],
+					"width": 9,
+					"height": 30,
+					"cornerRadius": 0,
+					"type": "rectangle"
+				},
+				{
+					"name": "Color",
+					"parent": 51,
+					"opacity": 1,
+					"numColorStops": 2,
+					"colorStops": [
+						1,
+						1,
+						1,
+						1,
+						0,
+						0.7595238089561462,
+						0.7595238089561462,
+						0.7595238089561462,
+						1,
+						1
+					],
+					"start": [
+						24.948835372924805,
+						5.738019943237305
+					],
+					"end": [
+						-28.9049129486084,
+						-19.21599769592285
+					],
+					"fillRule": 1,
+					"type": "gradientFill"
+				},
+				{
+					"name": "Rectangle",
+					"parent": 38,
+					"translation": [
+						62.647979736328125,
+						-45.11053466796875
+					],
+					"rotation": 0.935891493677799,
+					"scale": [
+						1,
+						1
+					],
+					"opacity": 1,
+					"isCollapsed": false,
+					"clips": [],
+					"isVisible": true,
+					"blendMode": 3,
+					"drawOrder": 23,
+					"transformAffectsStroke": false,
+					"type": "shape"
+				},
+				{
+					"name": "Color",
+					"parent": 54,
+					"opacity": 1,
+					"color": [
+						0.2078431397676468,
+						0.2078431397676468,
+						0.2078431397676468,
+						1
+					],
+					"fillRule": 1,
+					"type": "colorFill"
+				},
+				{
+					"name": "Rectangle Path",
+					"parent": 54,
+					"translation": [
+						0,
+						0
+					],
+					"rotation": 0,
+					"scale": [
+						1,
+						1
+					],
+					"opacity": 1,
+					"isCollapsed": false,
+					"clips": [],
+					"width": 4,
+					"height": 20,
+					"cornerRadius": 0,
+					"type": "rectangle"
+				},
+				{
+					"name": "Rectangle",
+					"parent": 38,
+					"translation": [
+						-15.39544677734375,
+						-109.52543640136719
+					],
+					"rotation": -0.6374765447517833,
+					"scale": [
+						1,
+						1
+					],
+					"opacity": 1,
+					"isCollapsed": false,
+					"clips": [],
+					"isVisible": true,
+					"blendMode": 3,
+					"drawOrder": 18,
+					"transformAffectsStroke": false,
+					"type": "shape"
+				},
+				{
+					"name": "Rectangle Path",
+					"parent": 57,
+					"translation": [
+						0,
+						0
+					],
+					"rotation": 0,
+					"scale": [
+						1,
+						1
+					],
+					"opacity": 1,
+					"isCollapsed": false,
+					"clips": [],
+					"width": 40,
+					"height": 5,
+					"cornerRadius": 0,
+					"type": "rectangle"
+				},
+				{
+					"name": "Color",
+					"parent": 57,
+					"opacity": 1,
+					"color": [
+						0.2078431397676468,
+						0.2078431397676468,
+						0.2078431397676468,
+						1
+					],
+					"fillRule": 1,
+					"type": "colorFill"
+				},
+				{
+					"name": "Rectangle",
+					"parent": 38,
+					"translation": [
+						55.336822509765625,
+						-14.022705078125
+					],
+					"rotation": -0.6374765447517833,
+					"scale": [
+						1,
+						1
+					],
+					"opacity": 1,
+					"isCollapsed": false,
+					"clips": [],
+					"isVisible": true,
+					"blendMode": 3,
+					"drawOrder": 19,
+					"transformAffectsStroke": false,
+					"type": "shape"
+				},
+				{
+					"name": "Rectangle Path",
+					"parent": 60,
+					"translation": [
+						0,
+						0
+					],
+					"rotation": 0,
+					"scale": [
+						1,
+						1
+					],
+					"opacity": 1,
+					"isCollapsed": false,
+					"clips": [],
+					"width": 40,
+					"height": 5,
+					"cornerRadius": 0,
+					"type": "rectangle"
+				},
+				{
+					"name": "Color",
+					"parent": 60,
+					"opacity": 1,
+					"color": [
+						0.2078431397676468,
+						0.2078431397676468,
+						0.2078431397676468,
+						1
+					],
+					"fillRule": 1,
+					"type": "colorFill"
+				},
+				{
+					"name": "Rectangle",
+					"parent": 38,
+					"translation": [
+						26.3878173828125,
+						-53.109771728515625
+					],
+					"rotation": -0.6374765447517833,
+					"scale": [
+						1,
+						1
+					],
+					"opacity": 1,
+					"isCollapsed": false,
+					"clips": [],
+					"isVisible": true,
+					"blendMode": 3,
+					"drawOrder": 20,
+					"transformAffectsStroke": false,
+					"type": "shape"
+				},
+				{
+					"name": "Rectangle Path",
+					"parent": 63,
+					"translation": [
+						0,
+						0
+					],
+					"rotation": 0,
+					"scale": [
+						1,
+						1
+					],
+					"opacity": 1,
+					"isCollapsed": false,
+					"clips": [],
+					"width": 40,
+					"height": 5,
+					"cornerRadius": 0,
+					"type": "rectangle"
+				},
+				{
+					"name": "Color",
+					"parent": 63,
+					"opacity": 1,
+					"color": [
+						0.2078431397676468,
+						0.2078431397676468,
+						0.2078431397676468,
+						1
+					],
+					"fillRule": 1,
+					"type": "colorFill"
+				},
+				{
+					"name": "Rectangle",
+					"parent": 38,
+					"translation": [
+						10.307342529296875,
+						-74.8216552734375
+					],
+					"rotation": -0.6374765447517833,
+					"scale": [
+						1,
+						1
+					],
+					"opacity": 1,
+					"isCollapsed": false,
+					"clips": [],
+					"isVisible": true,
+					"blendMode": 3,
+					"drawOrder": 21,
+					"transformAffectsStroke": false,
+					"type": "shape"
+				},
+				{
+					"name": "Rectangle Path",
+					"parent": 66,
+					"translation": [
+						0,
+						0
+					],
+					"rotation": 0,
+					"scale": [
+						1,
+						1
+					],
+					"opacity": 1,
+					"isCollapsed": false,
+					"clips": [],
+					"width": 40,
+					"height": 5,
+					"cornerRadius": 0,
+					"type": "rectangle"
+				},
+				{
+					"name": "Color",
+					"parent": 66,
+					"opacity": 1,
+					"color": [
+						0.2078431397676468,
+						0.2078431397676468,
+						0.2078431397676468,
+						1
+					],
+					"fillRule": 1,
+					"type": "colorFill"
+				},
+				{
+					"name": "Ellipse",
+					"parent": 38,
+					"translation": [
+						-0.6104736328125,
+						-18.90966796875
+					],
+					"rotation": 0,
+					"scale": [
+						0.9983606934547424,
+						1.0045902729034424
+					],
+					"opacity": 1,
+					"isCollapsed": false,
+					"clips": [],
+					"isVisible": true,
+					"blendMode": 3,
+					"drawOrder": 26,
+					"transformAffectsStroke": false,
+					"type": "shape"
+				},
+				{
+					"name": "Color",
+					"parent": 69,
+					"opacity": 1,
+					"color": [
+						0.20714285969734192,
+						0.20714285969734192,
+						0.20714285969734192,
+						1
+					],
+					"fillRule": 1,
+					"type": "colorFill"
+				},
+				{
+					"name": "Ellipse Path",
+					"parent": 69,
+					"translation": [
+						0,
+						0
+					],
+					"rotation": 0,
+					"scale": [
+						1,
+						1
+					],
+					"opacity": 1,
+					"isCollapsed": false,
+					"clips": [],
+					"width": 6,
+					"height": 6,
+					"type": "ellipse"
+				},
+				{
+					"name": "Rectangle",
+					"parent": 38,
+					"translation": [
+						22.912750244140625,
+						4.078033447265625
+					],
+					"rotation": -0.6254520804608896,
+					"scale": [
+						1,
+						1
+					],
+					"opacity": 1,
+					"isCollapsed": false,
+					"clips": [],
+					"isVisible": true,
+					"blendMode": 3,
+					"drawOrder": 13,
+					"transformAffectsStroke": false,
+					"type": "shape"
+				},
+				{
+					"name": "Rectangle Path",
+					"parent": 72,
+					"translation": [
+						0,
+						0
+					],
+					"rotation": 0,
+					"scale": [
+						1,
+						1
+					],
+					"opacity": 1,
+					"isCollapsed": false,
+					"clips": [],
+					"width": 8,
+					"height": 5,
+					"cornerRadius": 0,
+					"type": "rectangle"
+				},
+				{
+					"name": "Color",
+					"parent": 72,
+					"opacity": 1,
+					"color": [
+						0.2078431397676468,
+						0.2078431397676468,
+						0.2078431397676468,
+						1
+					],
+					"fillRule": 1,
+					"type": "colorFill"
+				},
+				{
+					"name": "Rectangle",
+					"parent": 38,
+					"translation": [
+						-20.3084716796875,
+						-35.350738525390625
+					],
+					"rotation": 0.9126196937489383,
+					"scale": [
+						1,
+						0.9979535341262817
+					],
+					"opacity": 1,
+					"isCollapsed": false,
+					"clips": [],
+					"isVisible": true,
+					"blendMode": 3,
+					"drawOrder": 14,
+					"transformAffectsStroke": false,
+					"type": "shape"
+				},
+				{
+					"name": "Rectangle Path",
+					"parent": 75,
+					"translation": [
+						0,
+						0
+					],
+					"rotation": 0,
+					"scale": [
+						1,
+						1
+					],
+					"opacity": 1,
+					"isCollapsed": false,
+					"clips": [],
+					"width": 6,
+					"height": 5,
+					"cornerRadius": 0,
+					"type": "rectangle"
+				},
+				{
+					"name": "Color",
+					"parent": 75,
+					"opacity": 1,
+					"color": [
+						0.2078431397676468,
+						0.2078431397676468,
+						0.2078431397676468,
+						1
+					],
+					"fillRule": 1,
+					"type": "colorFill"
+				},
+				{
+					"name": "Rectangle",
+					"translation": [
+						346.1623229980469,
+						382.444580078125
+					],
+					"rotation": 0,
+					"scale": [
+						1,
+						1
+					],
+					"opacity": 1,
+					"isCollapsed": false,
+					"clips": [],
+					"isVisible": true,
+					"blendMode": 3,
+					"drawOrder": 11,
+					"transformAffectsStroke": false,
+					"type": "shape"
+				},
+				{
+					"name": "Color",
+					"parent": 78,
+					"opacity": 1,
+					"color": [
+						0.2078431397676468,
+						0.2078431397676468,
+						0.2078431397676468,
+						1
+					],
+					"fillRule": 1,
+					"type": "colorFill"
+				},
+				{
+					"name": "Rectangle Path",
+					"parent": 78,
+					"translation": [
+						0,
+						0
+					],
+					"rotation": 0,
+					"scale": [
+						1,
+						1
+					],
+					"opacity": 1,
+					"isCollapsed": false,
+					"clips": [],
+					"bones": [],
+					"isVisible": true,
+					"isClosed": true,
+					"points": [
+						{
+							"pointType": 0,
+							"translation": [
+								-4.336334228515625,
+								-2.5
+							],
+							"radius": 0
+						},
+						{
+							"pointType": 0,
+							"translation": [
+								6.059814453125,
+								-2.5
+							],
+							"radius": 0
+						},
+						{
+							"pointType": 0,
+							"translation": [
+								8.49151611328125,
+								2.5
+							],
+							"radius": 0
+						},
+						{
+							"pointType": 0,
+							"translation": [
+								-7.47454833984375,
+								2.5
+							],
+							"radius": 0
+						}
+					],
+					"type": "path"
+				}
+			],
+			"animations": [
+				{
+					"name": "Searching",
+					"fps": 60,
+					"duration": 2,
+					"isLooping": true,
+					"keyed": [
+						{
+							"component": 38,
+							"rotation": [
+								[
+									{
+										"time": 0,
+										"interpolatorType": 2,
+										"cubicX1": 0.42,
+										"cubicY1": 0,
+										"cubicX2": 0.58,
+										"cubicY2": 1,
+										"value": 0
+									},
+									{
+										"time": 1,
+										"interpolatorType": 2,
+										"cubicX1": 0.42,
+										"cubicY1": 0,
+										"cubicX2": 0.58,
+										"cubicY2": 1,
+										"value": -0.5606107832854699
+									},
+									{
+										"time": 2,
+										"interpolatorType": 2,
+										"cubicX1": 0.42,
+										"cubicY1": 0,
+										"cubicX2": 0.58,
+										"cubicY2": 1,
+										"value": 0
+									}
+								]
+							]
+						}
+					],
+					"animationStart": 0,
+					"animationEnd": 2,
+					"type": "animation"
+				},
+				{
+					"name": "None",
+					"fps": 60,
+					"duration": 0,
+					"isLooping": false,
+					"keyed": [],
+					"animationStart": 0,
+					"animationEnd": 0,
+					"type": "animation"
+				}
+			],
+			"type": "artboard"
+		}
+	]
+}
