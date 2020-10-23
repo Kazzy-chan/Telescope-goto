@@ -1,8 +1,8 @@
 #include "Stepper.h"
 
-
 Stepper::Stepper(GPIOPin stepPin, GPIOPin dirPin, int steps, int microstepping, float gearRatio, Constraints constraints): 
-    stepPin(stepPin), dirPin(dirPin), steps(steps), microstepping(microstepping), gearRatio(gearRatio), constraints(constraints){}
+    stepPin(stepPin), dirPin(dirPin), steps(steps), microstepping(microstepping), gearRatio(gearRatio), constraints(constraints){
+    }
 
 Stepper Stepper::stepper1(){
     return Stepper(GPIOPin(Stepper1_Step_Pin), GPIOPin(Stepper1_Dir_Pin), Stepper1_Steps, Stepper1_Microstepping, Stepper1_GearRatio, Constraints());
@@ -27,15 +27,25 @@ bool Stepper::moveDegree(float degree){
 }
 
 bool Stepper::moveSteps(int steps, bool clockwise){
-    bool isValid = this->constraints.isValid(steps, !clockwise);
-    if(isValid){
+    if(this->constraints.isActive()){
+        bool isValid = this->constraints.isValid(steps, !clockwise);
+        if(isValid){
+            this->changeDir(clockwise);
+            for (int i = 0; i < steps; i++){
+                this->stepPin.toggle();
+                this->stepPin.toggle();
+            }
+            this->constraints.moveSteps(steps, !clockwise);
+        }
+        return isValid;
+    }else{
         this->changeDir(clockwise);
         for (int i = 0; i < steps; i++){
             this->stepPin.toggle();
+            this->stepPin.toggle();
         }
-        this->constraints.moveSteps(steps, !clockwise);
+        return true;
     }
-    return isValid;
 }
 
 Constraints& Stepper::getConstraints(){

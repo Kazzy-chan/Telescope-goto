@@ -20,6 +20,7 @@ public:
     DateTime& getCurrentDateTime();
     Constraints& getStepper1Constraints();
     Constraints& getStepper2Constraints();
+    StepperManager& getStepperManager();
 };
 
 
