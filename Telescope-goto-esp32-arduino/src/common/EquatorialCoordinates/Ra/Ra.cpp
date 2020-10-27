@@ -1,11 +1,16 @@
 #include "Ra.h"
+#include <stdexcept>
 
-Ra::Ra(int seconds): seconds(seconds){}
+Ra::Ra(int seconds){
+    if (seconds > 86400) throw std::runtime_error("ra value invalid");
+    this->seconds = seconds;
+}
 Ra::Ra(int hours, int minutes, int seconds){
     this->seconds = 0;
     this->seconds =+ hours * 3600;
-    this->seconds =+ minutes * 60;
+    this->seconds =+ minutes * 60;    
     this->seconds = seconds;
+    if (seconds > 86400) throw std::runtime_error("ra value invalid");
 }
 
 Ra Ra::operator+ (const Ra& other){

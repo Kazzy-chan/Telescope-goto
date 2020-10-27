@@ -1,6 +1,10 @@
 #include "Dec.h"
+#include <stdexcept>
     
-Dec::Dec(int arcseconds):arcseconds(arcseconds){}
+Dec::Dec(int arcseconds):arcseconds(arcseconds){
+    if (arcseconds > 648000 || arcseconds < -648000) throw std::runtime_error("dec value invalid");
+    this->arcseconds=arcseconds;
+}
     
 Dec::Dec(char sign, int degrees, int arcminutes, int arcseconds){
     this->arcseconds = 0;
@@ -8,6 +12,7 @@ Dec::Dec(char sign, int degrees, int arcminutes, int arcseconds){
     this->arcseconds =+ arcminutes * 60;
     this->arcseconds =+ arcseconds;
     this->arcseconds = sign == '-'? arcseconds *-1: arcseconds;
+    if (arcseconds > 648000 || arcseconds < -648000) throw std::runtime_error("dec value invalid");
 }
 
 Dec Dec::operator+ (const Dec& other){
@@ -53,6 +58,6 @@ Dec Dec::fromString(std::string str){
     int degrees = atoi(str.substr(1, 2).c_str());
     int arcminutes = atoi(str.substr(4, 2).c_str());
     int arcseconds = atoi(str.substr(7, 2).c_str());
-    
+
     return Dec(sign, degrees, arcminutes, arcseconds);
 }
