@@ -6,6 +6,7 @@ EquatorialCoordinates::EquatorialCoordinates(Ra ra, Dec dec): ra(ra), dec(dec){
 }
 
 EquatorialCoordinates EquatorialCoordinates::polarStar(){
+    EquatorialCoordinates test = EquatorialCoordinates(Ra::fromString("02:33:33"), Dec::fromString("+89*15:48"));
     return EquatorialCoordinates(Ra::fromString("02:33:33"), Dec::fromString("+89*15:48"));
 }
 
