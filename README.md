@@ -1,5 +1,4 @@
-# Telescope-goto
-
+# Telescope
 ## Hardware
 - Telescope: BRESSER SKYLUX REFRACTUR 70/700
 - Microcontroller: ESP-32
