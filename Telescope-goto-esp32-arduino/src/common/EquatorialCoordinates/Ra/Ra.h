@@ -7,17 +7,16 @@
 
 class Ra{
 private:
-    int hours;
-    int minutes;
     int seconds;
 public:
+    Ra(int seconds);
     Ra(int hours, int minutes, int seconds);
     static Ra fromString(std::string);
 
     Ra operator+ (const Ra& other);
     Ra operator- (const Ra& other);
 
-    float toDegree();
+    int toArcsecond();
     void update(std::string);
     std::string toString();
 };
